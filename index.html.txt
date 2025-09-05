@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KGN MiMoCare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #ff6600, #ffcc00);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #ff6600;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #ff6600;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KGN MiMoCare</h1>
+    <p>দ্রুত, সঠিক এবং বিশ্বস্ত মোবাইল সার্ভিস</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>KGN MiMoCare হলো পশ্চিমবঙ্গের অন্যতম বৃহৎ মোবাইল রিপেয়ার সেন্টার। আমাদের 20+ অভিজ্ঞ টেকনিশিয়ান মাইক্রোস্কোপ ব্যবহার করে দ্রুত ও সঠিকভাবে মোবাইল সার্ভিস প্রদান করে।</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>iPhone Repair</h3>
+        <p>Original parts সহ iPhone রিপেয়ার সার্ভিস।</p>
+      </div>
+      <div class="card">
+        <h3>Android Repair</h3>
+        <p>সব ধরনের অ্যান্ড্রয়েড মোবাইল মেরামত।</p>
+      </div>
+      <div class="card">
+        <h3>Parts Available</h3>
+        <p>সব ধরনের মোবাইল পার্টস পাওয়া যায়।</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>শীঘ্রই গ্যালারি আপডেট হবে।</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Ghutiary Sharif, Halderpara, 1st Floor, Beside United Bank of India, West Bengal - 743363</p>
+    <p><strong>Phone:</strong> +91 7001191931</p>
+    <p><strong>Email:</strong> info@mimocare.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 KGN MiMoCare. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
