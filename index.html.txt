@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiMoCare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #f0f8ff, #e6f7ff);
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: #0088cc;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+    .card h2 {
+      margin-bottom: 10px;
+      color: #0088cc;
+    }
+    footer {
+      margin-top: 40px;
+      background: #222;
+      color: #fff;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    MiMoCare – Mobile Repair Service
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>📱 আপনার মোবাইলের যেকোনো সমস্যা সমাধান</h2>
+      <p>দ্রুত, সঠিক এবং বিশ্বস্ত মোবাইল সার্ভিস – MiMoCare</p>
+      <p><b>📞 ফোন:</b> 7001191931</p>
+      <p><b>📍 ঠিকানা:</b> ঘুটিয়ারি শরীফ, পোস্ট-জীবনতলা, পশ্চিমবঙ্গ</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 MiMoCare | Developed by Azizul Laskar
+  </footer>
+</body>
+</html>
