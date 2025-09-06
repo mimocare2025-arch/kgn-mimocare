@@ -1,64 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MiMoCare</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiMoCare — দ্রুত, সঠিক এবং বিশ্বস্ত মোবাইল সার্ভিস</title>
+  <meta name="description" content="MiMoCare — Ghutiary Sharif. ফোন: 7001181931, 9832758151. আমরা দ্রুত, সঠিক এবং বিশ্বস্ত মোবাইল সার্ভিস দি।">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(120deg, #f0f8ff, #e6f7ff);
-      color: #333;
-      text-align: center;
+    :root{
+      --primary:#0d6efd;
+      --accent:#ff7a59;
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --maxw:1100px;
     }
-    header {
-      background: #0088cc;
-      color: white;
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
+    *{box-sizing:border-box}
+    body{ margin:0; font-family: 'Noto Sans', Arial, sans-serif; background:var(--bg); color:#102a43; -webkit-font-smoothing:antialiased; }
+    a{ color:var(--primary); text-decoration:none; }
+    header{ background:linear-gradient(90deg,#0d6efd,#0b9bdc); color:#fff; padding:20px 12px; position:sticky; top:0; z-index:10; }
+    .container{ max-width:var(--maxw); margin:0 auto; padding:16px; }
+
+    /* header content */
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
     }
-    .container {
-      padding: 40px;
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .brand img{ width:64px; height:64px; border-radius:12px; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,0.15); background:#fff; padding:6px; }
+    .brand h1{ margin:0; font-size:20px; line-height:1; }
+    .brand p{ margin:0; font-size:13px; opacity:0.95; }
+
+    nav ul{ display:flex; gap:12px; list-style:none; margin:0; padding:0; }
+    nav li{ font-weight:600; }
+    .contact-short{ text-align:right; font-size:14px; }
+
+    /* hero */
+    .hero{
+      background: url('assets/bg.jpg') center/cover no-repeat;
+      padding:36px 12px;
+      color:#041b2d;
     }
-    .card {
-      background: white;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 500px;
-    }
-    .card h2 {
-      margin-bottom: 10px;
-      color: #0088cc;
-    }
-    footer {
-      margin-top: 40px;
-      background: #222;
-      color: #fff;
-      padding: 15px;
-    }
+    .hero .hero-inner{ background: rgba(255,255,255,0.92); padding:18px; border-radius:12px; box-shadow:0 6px 24px rgba(2,20,40,0.08); display:grid; grid-template-columns:1fr 320px; gap:18px; align-items:center; }
+    @media (max-width:880px){ .hero .hero-inner{ grid-template-columns:1fr; } }
+
+    .hero h2{ margin:0 0 6px 0; font-size:22px; color:var(--primary); }
+    .hero p{ margin:0; color:#1b365b; }
+
+    .btn{ display:inline-block; padding:10px 14px; border-radius:8px; font-weight:700; text-align:center; }
+    .btn-primary{ background:var(--primary); color:#fff; box-shadow:0 6px 18px rgba(13,110,253,0.12); }
+    .btn-ghost{ background:transparent; color:var(--primary); border:1px solid rgba(13,110,253,0.14); }
+
+    /* main card areas */
+    .card{ background:var(--card); padding:16px; margin-top:18px; border-radius:12px; box-shadow:0 6px 20px rgba(2,20,40,0.04); }
+    .grid{ display:grid; grid-template-columns: 1fr 340px; gap:18px; }
+    @media (max-width:880px){ .grid{ grid-template-columns:1fr; } }
+
+    h3{ margin-top:0; color:#0b2b4a; }
+    .small{ font-size:14px; color:#334e68; }
+
+    .services{ display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-top:12px; }
+    .service-item{ padding:12px; border-radius:10px; background:linear-gradient(180deg,#fff,#f8fbff); box-shadow:0 4px 12px rgba(2,20,40,0.04); }
+
+    .gallery{ display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:12px; }
+    .gallery img{ width:100%; display:block; border-radius:8px; object-fit:cover; height:140px; }
+
+    footer{ margin-top:18px; background:#08304a; color:#fff; padding:12px; text-align:center; border-radius:8px; }
+
+    /* small helpers */
+    .muted{ color:#64748b; font-size:14px; }
+    .list-plain{ list-style:none; padding:0; margin:0; }
+    .list-plain li{ margin:8px 0; }
+
   </style>
 </head>
 <body>
+
+  <!-- Header / Nav -->
   <header>
-    MiMoCare – Mobile Repair Service
+    <div class="container top">
+      <div class="brand">
+        <!-- LOGO: Upload your logo at assets/logo.png -->
+        <img src="assets/logo.png" alt="MiMoCare Logo" />
+        <div>
+          <h1>MiMoCare</h1>
+          <p>MiMoCare — দ্রুত, সঠিক এবং বিশ্বস্ত মোবাইল সার্ভিস</p>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:18px;">
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="contact-short">
+          <div style="font-weight:700;">📞 <a href="tel:+917001181931" style="color:#fff;">7001181931</a></div>
+          <div class="muted">✉️ <a href="mailto:mimocare2025@gmail.com" style="color:#fff;">mimocare2025@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="card">
-      <h2>📱 আপনার মোবাইলের যেকোনো সমস্যা সমাধান</h2>
-      <p>দ্রুত, সঠিক এবং বিশ্বস্ত মোবাইল সার্ভিস – MiMoCare</p>
-      <p><b>📞 ফোন:</b> 7001191931</p>
-      <p><b>📍 ঠিকানা:</b> ঘুটিয়ারি শরীফ, পোস্ট-জীবনতলা, পশ্চিমবঙ্গ</p>
-    </div>
-  </div>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <h2>আপনার মোবাইল, আমাদের যত্ন</h2>
+          <p class="small">MiMoCare-এ আমরা দ্রুত, সঠিক ও বিশ্বস্ত মোবাইল সার্ভিস দিয়ে থাকি — স্ক্রিন রিপ্লেস, ব্যাটারি চেঞ্জ, মাদারবোর্ড সার্ভিস, আইফোন রিপেয়ার ও মাইক্রোস্কোপ-অধ্যায়িত মেরামত। ২০ বছরের অভিজ্ঞ টিম আপনার সুবিধার জন্য প্রস্তুত।</p>
 
-  <footer>
-    &copy; 2025 MiMoCare | Developed by Azizul Laskar
-  </footer>
-</body>
-</html>
+          <div style="margin-top:12px;">
+            <a class="btn btn-primary" href="tel:+917001181931">📞 এখনই কল করুন — 7001181931</a>
+            <a class="btn btn-ghost" href="https://wa.me/917001181931" target="_blank" style="margin-left:8px;">💬 WhatsApp</a>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <!-- small contact card -->
+          <div style="background:linear-gradient(180deg,#fff,#f2fbff); padding:16px; border-radius:12px; box-shadow:0 6px 18px rgba(2,20,40,0.06);">
+            <h3 style="margin:0 0 8px 0;">Quick Contact</h3>
+            <p class="muted" style="margin:0 0 10px 0;">সরাসরি কল বা WhatsApp করুন</p>
+            <p style="margin:8px 0;"><a class="btn btn-primary" href="tel:+917001181931" style="width:100%; display:inline-block;">📞 7001181931</a></p>
+            <p style="margin:8px 0;"><a class="btn" href="mailto:mimocare2025@gmail.com" style="width:100%; display:inline-block; background:#eef6ff; color:var(--primary);">✉️ ইমেইল</a></p>
+            <p style="margin:8px 0;"><a class="btn btn-ghost" href="https://wa.me/917001181931" target="_blank" style="width:100%; display:inline-block;">💬 WhatsApp</a></p>
+            <p class="muted" style="margin-top:8px;">অন্য মোবাইল: <a href="tel:+919832758151">9832758151</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="container" style="padding-top:12px;">
+
+    <!-- About -->
+    <section id="about" class="card" aria-labelledby="about-heading">
+      <h3 id="about-heading">About — MiMoCare</h3>
+      <p class="small">MiMoCare (KGN MiMoCare) হলো আপনার নিকটস্থ এক বিশ্বস্ত মোবাইল সার্ভিস সেন্টার, Ghutiary Sharif-এ অবস্থিত। আমাদের টিম ২০ বছরের অভিজ্ঞতা সম্পন্ন এবং ২০+ দক্ষ টেকনিশিয়ান রয়েছে, যারা মাইক্রোস্কোপ-আধারিত পদ্ধতিতে দ্রুত ও নির্ভুলভাবে রক্ষণাবেক্ষণ করে থাকেন। আমরা শুধুমাত্র মেরামতই করি না — আমরা নিশ্চিত করি আপনার ডিভাইস দীর্ঘদিন ভালো অবস্থায় থাকবে।</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="card" style="margin-top:12px;" aria-labelledby="services-heading">
+      <h3 id="services-heading">Services — আমরা যা করি</h3>
+      <div class="services">
