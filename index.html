@@ -3,243 +3,220 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KGN MiMoCare — কে জি এন মিমো কেয়ার — দ্রুত, সঠিক এবং বিশ্বস্ত মোবাইল সার্ভিস</title>
-  <meta name="description" content="KGN MiMoCare — কে জি এন মিমো কেয়ার। ডিসপ্লে, আইসি, চার্জিং, সফটওয়্যার, ট্রেনিং ও পেমেন্ট। ফোন: 9832758151, 7001191931" />
+  <title>MiMoCare - Home</title>
+
   <style>
-    :root{--accent1:#ff7a18;--accent2:#ffd200;--muted:#666;--maxw:1100px;font-family:"Noto Sans Bengali",Arial,sans-serif}
-    *{box-sizing:border-box} body{margin:0;background:#f5f7fa;color:#222;line-height:1.6}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:16px}
+    /* সরল রিসেট */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family: 'Helvetica Neue', Arial, sans-serif;background:#f7f7f7;color:#111;line-height:1.5}
 
-    /* HEADER */
-   <header style="background:#fff;border-bottom:1px solid #ddd;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;">
-  <!-- লোগো -->
-  <div style="font-weight:700;font-size:20px;display:flex;align-items:center;gap:6px;">
-    <span style="color:#000;">KGN</span> | <span style="color:#000;">MiMoCare</span>
-  </div>
+    /* Header / Navbar */
+    .header{
+      background:#fff;
+      border-bottom:1px solid #e6e6e6;
+      position:sticky;
+      top:0;
+      z-index:9999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{display:flex;align-items:center;gap:8px}
+    .logo .kgn{font-weight:800;font-size:20px;letter-spacing:1px}
+    .logo .brand{font-size:18px;color:#222}
+    /* nav - desktop */
+    nav{display:flex;align-items:center;gap:18px}
+    nav ul{display:flex;gap:18px;list-style:none;align-items:center}
+    nav a{color:#222;text-decoration:none;padding:8px 6px;border-radius:4px;font-weight:500}
+    nav a.active, nav a:hover{background:#f0f0f0}
+    /* small contact box (right) */
+    .top-contact{display:flex;flex-direction:column;align-items:flex-end;font-size:13px;color:#444}
+    .top-contact a{color:#111;text-decoration:none;font-weight:700}
 
-  <!-- নেভিগেশন -->
-  <nav>
-    <ul style="list-style:none;display:flex;gap:20px;margin:0;padding:0;">
-      <li><a href="/" style="text-decoration:none;color:#111;">Home</a></li>
-      <li><a href="#about" style="text-decoration:none;color:#111;">About</a></li>
-      <li><a href="#services" style="text-decoration:none;color:#111;">Services</a></li>
-      <li><a href="#training" style="text-decoration:none;color:#111;">Training</a></li>
-      <li><a href="#booking" style="text-decoration:none;color:#111;">Booking</a></li>
-      <li><a href="#contact" style="text-decoration:none;color:#111;">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    /* Mobile */
+    .menu-btn{display:none;background:transparent;border:0;font-size:22px;cursor:pointer}
+    @media (max-width:820px){
+      .wrap{padding:8px 12px}
+      nav ul{display:none;flex-direction:column;position:absolute;right:12px;top:64px;background:#fff;padding:12px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.12)}
+      nav.open ul{display:flex}
+      .menu-btn{display:block}
+      .top-contact{display:none}
+    }
 
-    /* LAYOUT */
-    main{margin-top:18px}
-    .card{background:#fff;border-radius:10px;padding:16px;margin-bottom:14px;box-shadow:0 8px 26px rgba(10,10,30,0.04)}
-    h2{margin-top:0;color:#b33}
-    .two-col{display:grid;grid-template-columns:1fr 360px;gap:16px}
-    @media(max-width:900px){ .two-col{grid-template-columns:1fr} .brand-left h1{font-size:28px} }
+    /* Hero / content layout */
+    .hero{padding:34px 16px;background:linear-gradient(180deg,#fff,#fbfbfb)}
+    .container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
+    .card{background:#fff;padding:18px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.04)}
+    .hero h1{font-size:24px;margin-bottom:8px}
+    .hero p{color:#444}
 
-    /* SERVICES */
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-    .service{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfbfb);border:1px solid #eee;text-align:center;transition:transform .18s}
-    .service:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(10,10,30,0.06)}
-    .service h3{margin:8px 0;font-size:17px}
+    /* smaller sections */
+    .section{max-width:1100px;margin:18px auto;padding:0 16px}
+    .section .card{padding:18px}
 
-    /* GALLERY */
-    .gallery{display:flex;flex-wrap:wrap;gap:10px}
-    .gallery img{width:100%;max-width:300px;border-radius:8px;box-shadow:0 8px 22px rgba(0,0,0,0.06)}
+    /* services grid */
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px}
+    .service-item{background:#fff;padding:12px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
 
-    /* FORM */
-    input,textarea,select{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ddd;font-size:15px}
-    .small{font-size:13px;color:var(--muted)}
+    /* Footer */
+    footer{margin-top:28px;padding:20px;text-align:center;color:#666;font-size:14px}
 
-    footer{text-align:center;padding:12px;font-size:14px;color:#666;margin-top:12px}
-    .inline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    /* small helpers */
+    .muted{color:#666;font-size:14px}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <!-- HEADER -->
-    <header class="hero">
-  <div class="title">
-    <div class="brand-left">
-      <h1>KGN MiMoCare</h1>
-      <div class="bn-name">কে জি এন মিমো কেয়ার</div>
-      <div class="tagline">
-        📱 দ্রুত ও বিশ্বস্ত মোবাইল রিপেয়ারিং সার্ভিস – KGN MiMoCare
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="wrap">
+      <div class="logo">
+        <!-- যদি ছবি লোগো দিতে চাও, img ট্যাগ ব্যবহার করো এবং নিচের text hide করো -->
+        <!-- <img src="logo.png" alt="MiMoCare" style="height:44px"> -->
+        <div class="kgn">KGN</div>
+        <div class="brand">MiMoCare</div>
+      </div>
+
+      <nav id="mainNav">
+        <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
+        <ul>
+          <li><a href="#home" class="navlink">Home</a></li>
+          <li><a href="#about" class="navlink">About</a></li>
+          <li><a href="#services" class="navlink">Services</a></li>
+          <li><a href="#training" class="navlink">Training</a></li>
+          <li><a href="#booking" class="navlink">Booking</a></li>
+          <li><a href="#contact" class="navlink">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="top-contact">
+        <div class="muted">Call / WhatsApp</div>
+        <div><a href="tel:+917001191931">7001191931</a></div>
       </div>
     </div>
+  </header>
 
-        <div class="cta-buttons" aria-label="Contact actions">
-          <!-- PRIMARY shop number first -->
-          <a class="btn btn-call" href="tel:+919832758151">📞 9832758151 (দোকান)</a>
-          <a class="btn btn-call2" href="tel:+917001191931">📞 7001191931 (Azizul)</a>
-          <a class="btn btn-call2" href="tel:+919091713561">📞 9091713561</a>
-          <a class="btn btn-wa" href="https://wa.me/919832758151?text=হ্যালো+KGN+MiMoCare" target="_blank" rel="noopener">💬 WhatsApp</a>
-          <a class="btn btn-order" href="#order">🛒 অর্ডার / রেজিস্টার</a>
+  <!-- HERO / HOME -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="card">
+        <h1>MiMoCare — দ্রুত, সঠিক এবং বিশ্বস্ত মোবাইল সার্ভিস</h1>
+        <p>স্বাগতম! আমরা IC-level সার্ভিস, মাইক্রোস্কোপ রিপেয়ার, এবং অরিজিনাল পার্টস দিয়ে থাকি। নিচের লিংকগুলোতে ক্লিক করলে প্রতিটি সেকশনে যাবে এবং সেখানে বিস্তারিত দেখা যাবে।</p>
+
+        <div style="margin-top:12px">
+          <a href="#services" class="navlink" style="display:inline-block;margin-right:8px;padding:8px 12px;border-radius:6px;border:1px solid #ddd;text-decoration:none;background:#fff">Our Services</a>
+          <a href="#contact" class="navlink" style="display:inline-block;padding:8px 12px;border-radius:6px;text-decoration:none;background:#111;color:#fff">Contact Now</a>
         </div>
       </div>
-    </header>
 
-    <main>
-      <div class="two-col">
-        <!-- LEFT MAIN -->
-        <div>
-          <!-- INTRO -->
-          <section class="card" id="intro">
-            <h2>আপনার মোবাইল কি ঠিকভাবে কাজ করছে না?</h2>
-            <p>ডিসপ্লে ভাঙা, চার্জ নিচ্ছে না, অথবা আইসি সমস্যা? চিন্তার কিছু নেই! এখনই চলে আসুন — <strong>MiMoCare (কে জি এন মিমো কেয়ার)</strong>-এ।</p>
-            <p class="small">২০ বছরের অভিজ্ঞতা ও ২৫ জন দক্ষ টেকনিশিয়ানের মাধ্যমে আমরা দিচ্ছি আধুনিক, নিখুঁত এবং দ্রুত মোবাইল সার্ভিস।</p>
-          </section>
+      <aside class="card" id="contact-short">
+        <strong>যোগাযোগ</strong>
+        <div style="margin-top:8px"><a href="tel:+917001191931">7001191931</a></div>
+        <div class="muted" style="margin-top:8px">Ghutiary Sharif, Near Auto Stand</div>
+      </aside>
+    </div>
+  </section>
 
-          <!-- SERVICES -->
-          <section class="card" id="services">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-              <div class="service"><h3>📱 iPhone Repair</h3><p class="small">Original parts সহ iPhone সার্ভিস — ডিসপ্লে, ব্যাটারি, আইসি, ওয়াটার ড্যামেজ</p></div>
-              <div class="service"><h3>🤖 Android Repair</h3><p class="small">সব ব্র্যান্ডের Android মাদারবোর্ড ও সফটওয়্যার সার্ভিস</p></div>
-              <div class="service"><h3>⚙️ Parts Available</h3><p class="small">স্ক্রিন, ব্যাটারি, চার্জিং পোর্ট ও অন্যান্য অরিজিনাল পার্টস</p></div>
-              <div class="service"><h3>🔬 Micro Repair (IC level)</h3><p class="small">মাইক্রোস্কোপ ব্যবহার করে IC লেভেল রিপেয়ার ও মাইক্রোসোল্ডিং</p></div>
-              <div class="service"><h3>⏱️ Fast Service</h3><p class="small">পার্টস থাকলে একদিনের মধ্যে সমাধান</p></div>
-              <div class="service"><h3>🎓 Training</h3><p class="small">হাতে-কলমে মোবাইল রিপেয়ারিং ট্রেনিং — শেখার জন্য যোগাযোগ করুন</p></div>
-            </div>
-          </section>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="card">
+      <h2>About MiMoCare</h2>
+      <p>MiMoCare ২০ বছরের অভিজ্ঞতায় গ্রাহকদের মোবাইল সার্ভিস দেয়। আমাদের টিম মাইক্রোস্কোপ সহ IC-লেভেল রিপেয়ার সক্ষম।</p>
+      <ul style="margin-top:10px;color:#444">
+        <li>অরিজিনাল পার্টস সরবরাহ</li>
+        <li>ফাস্ট টার্নঅ্যারাউন্ড ওয়ার্ক</li>
+        <li>ওয়ারেন্টি সহ সার্ভিস</li>
+      </ul>
+    </div>
+  </section>
 
-          <!-- ORDER / TRAINING -->
-          <section class="card" id="order">
-            <h2>অর্ডার / রেজিস্ট্রেশন</h2>
-            <p>অনলাইনে অর্ডার/রেজিস্টার করতে নিচের ফরম পূরণ করে প্রথমে <strong>১০০ টাকা</strong> জমা দিন (রেজিস্ট্রেশন/বুকিং ফি)। পরে যোগাযোগ করে বাকিটা সমন্বয় করা হবে।</p>
-
-            <form id="orderForm">
-              <label>আপনার নাম (প্রয়োজনীয়)</label>
-              <input id="cust_name" type="text" placeholder="নাম লিখুন" required>
-
-              <label>মোবাইল নম্বর (প্রয়োজনীয়)</label>
-              <input id="cust_phone" type="tel" placeholder="৭০০১১৯১৯৩১" required>
-
-              <label>সার্ভিস টাইপ</label>
-              <select id="service_type">
-                <option value="iphone">iPhone Repair</option>
-                <option value="android">Android Repair</option>
-                <option value="parts">Parts Purchase</option>
-                <option value="diagnostic">Diagnostic / Checkup</option>
-                <option value="training">Training Registration</option>
-              </select>
-
-              <label>সার্ভিস বর্ণনা (ঐচ্ছিক)</label>
-              <textarea id="cust_note" rows="3" placeholder="সংক্ষিপ্ত সমস্যা বা বার্তা লিখুন"></textarea>
-
-              <p class="small">ফরম সাবমিট করলে Razorpay পপআপ খুলে ১০০ টাকা দেওয়া যাবে (রেজিস্ট্রেশন ফি)।</p>
-              <button type="button" id="payButton" class="btn-order">💳 ১০০ টাকা দিয়ে সাবমিট ও রেজিস্টার</button>
-            </form>
-          </section>
-
-          <!-- GALLERY -->
-          <section class="card" id="gallery">
-            <h2>Gallery</h2>
-            <div class="gallery">
-              <img src="your-photo.jpg" alt="Owner photo">
-              <img src="technician.jpg" alt="Technician">
-              <img src="shop.jpg" alt="Shop/Workshop">
-            </div>
-          </section>
-
-          <!-- QR -->
-          <section class="card" id="qr">
-            <h2>QR কোড</h2>
-            <p class="small">নিচের QR স্ক্যান করে সরাসরি UPI/PhonePe/GooglePay দিয়ে পেমেন্ট করতে পারবেন — পেমেন্টের স্ক্রিনশট পাঠালে দ্রুত রেজিস্ট্রেশন নিশ্চিত করা হবে।</p>
-            <div style="margin-top:8px"><img src="qrcode.png" alt="QR Code" style="max-width:220px;border-radius:8px"></div>
-          </section>
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="card">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <strong>IC-level Repair</strong>
+          <p class="muted" style="margin-top:6px">মাইক্রোস্কোপ দিয়ে বেসিক ও সুরক্ষিত IC রিপেয়ার।</p>
         </div>
-
-        <!-- RIGHT SIDEBAR -->
-        <aside>
-          <!-- QUICK CONTACT -->
-          <section class="card" id="quick">
-            <h2>দ্রুত যোগাযোগ</h2>
-            <div class="inline" style="flex-direction:column;align-items:flex-start">
-              <a class="btn btn-call" href="tel:+919832758151">📞 9832758151 (দোকান)</a>
-              <a class="btn btn-call2" href="tel:+917001191931">📞 7001191931 (Azizul)</a>
-              <a class="btn btn-call2" href="tel:+919091713561">📞 9091713561</a>
-              <a class="btn btn-wa" href="https://wa.me/919832758151?text=হ্যালো+KGN+MiMoCare" target="_blank">💬 WhatsApp</a>
-            </div>
-            <p class="small" style="margin-top:8px">অফিস টাইম: সকাল ১০টা - সন্ধ্যা ৭টা</p>
-            <p class="small" style="margin-top:6px;color:#444">যদি 9832758151-এ কল না মেলে → অনুগ্রহ করে 7001191931 (Azizul) -এ কল করুন।</p>
-          </section>
-
-          <!-- LOCATION MAP -->
-          <section class="card" id="location">
-            <h2>আমাদের ঠিকানা</h2>
-            <p class="small">ঘুটিয়ারী শরিফ, নতুন রাস্তা, অটো স্ট্যান্ডের পাশে</p>
-            <!-- IMPORTANT: এখানে Google Maps → Share → Embed a map → copy iframe src এবং নিচে বসান -->
-            <iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=PUT_YOUR_EMBED_SRC_HERE"
-              width="100%" height="220" style="border:0;border-radius:8px" allowfullscreen="" loading="lazy"></iframe>
-            <p class="small">ম্যাপ ক্লিক করলে বড় ম্যাপে খোলা হবে।</p>
-          </section>
-
-          <!-- QUICK INFO -->
-          <section class="card" id="info">
-            <h2>কেন আমাদের?</h2>
-            <ul style="padding-left:18px;margin:6px 0">
-              <li class="small">২০ বছরের অভিজ্ঞতা</li>
-              <li class="small">২৫ জন দক্ষ টেকনিশিয়ান</li>
-              <li class="small">অরিজিনাল পার্টস ও দ্রুত সার্ভিস</li>
-            </ul>
-            <p class="small">MiMoCare — দ্রুত, সঠিক ও বিশ্বস্ত মোবাইল সার্ভিস।</p>
-          </section>
-        </aside>
+        <div class="service-item">
+          <strong>Screen Replacement</strong>
+          <p class="muted" style="margin-top:6px">অরিজিনাল/গুড কোয়ালিটি ডিসপ্লে।</p>
+        </div>
+        <div class="service-item">
+          <strong>Battery Replacement</strong>
+          <p class="muted" style="margin-top:6px">কেভি-টেস্টেড ব্যাটারি অপশন।</p>
+        </div>
+        <div class="service-item">
+          <strong>Water Damage Repair</strong>
+          <p class="muted" style="margin-top:6px">ক্লিন রিকভারি সার্ভিস।</p>
+        </div>
       </div>
-    </main>
+    </div>
+  </section>
 
-    <footer>
-      © 2025 KGN MiMoCare — কে জি এন মিমো কেয়ার — তৈরি করেছেন Azizul Laskar
-      <div class="small" id="lastUpdated">লাস্ট আপডেট: </div>
-    </footer>
-  </div>
+  <!-- TRAINING -->
+  <section id="training" class="section">
+    <div class="card">
+      <h2>Training</h2>
+      <p>প্রোফেশনাল ট্রেনিং কোর্স—মোবাইল সার্ভিসিং ও মাইক্রোস্কোপ ব্যবহার। বিস্তারিত জানতে যোগাযোগ করুন।</p>
+    </div>
+  </section>
 
-  <!-- RAZORPAY CHECKOUT -->
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <script>
-    // ====== CONFIGURE THESE VALUES ======
-    const RAZORPAY_KEY = "rzp_test_yourKeyHere"; // <-- আপনার Razorpay Key ID বসাবেন
-    const AMOUNT = 100; // ₹১০০ (রেজিস্ট্রেশন ফি)
-    const SHOP_NUMBER = "919832758151"; // shop WhatsApp / tel with country code (used in prefilled WA text)
-    // ================================
+  <!-- BOOKING -->
+  <section id="booking" class="section">
+    <div class="card">
+      <h2>Booking</h2>
+      <p>আপনি চাইলে পূর্বেই অ্যাপয়েন্টমেন্ট নিতে পারেন। ফোন করে দিন বা WhatsApp করে বুকিং নিশ্চিত করুন।</p>
+    </div>
+  </section>
 
-    // Auto-update last updated date
-    (function(){
-      const d=new Date();
-      document.getElementById('lastUpdated').textContent =
-        'লাস্ট আপডেট: ' + String(d.getDate()).padStart(2,'0') + "-" + String(d.getMonth()+1).padStart(2,'0') + "-" + d.getFullYear();
-    })();
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="card">
+      <h2>Contact</h2>
+      <p><strong>MiMoCare</strong></p>
+      <p>ঠিকানা: Ghutiary Sharif, Near Auto Stand, Jiban Tala</p>
+      <p>ফোন: <a href="tel:+917001191931">7001191931</a>, <a href="tel:+91915364541">915364541</a>, <a href="tel:+919832758151">9832758151</a></p>
+      <p style="margin-top:8px" class="muted">কাজের সময়: সকাল ৯টা - রাত ৯টা</p>
+    </div>
+  </section>
 
-    // Razorpay payment on order form
-    document.getElementById('payButton').onclick = function(e){
-      const name = document.getElementById('cust_name').value.trim();
-      const phone = document.getElementById('cust_phone').value.trim();
-      const service = document.getElementById('service_type').value;
-      const note = document.getElementById('cust_note').value.trim();
+  <footer>
+    © MiMoCare — All rights reserved.
+  </footer>
 
-      if(!name || !phone){ alert('দয়া করে নাম ও মোবাইল নম্বর দিন।'); return; }
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('mainNav');
+  menuBtn && menuBtn.addEventListener('click', ()=> nav.classList.toggle('open'));
 
-      const options = {
-        "key": RAZORPAY_KEY,
-        "amount": AMOUNT * 100,
-        "currency": "INR",
-        "name": "KGN MiMoCare",
-        "description": "Registration / Booking Fee",
-        "handler": function (response){
-          alert("পেমেন্ট সফল হয়েছে!\nPayment ID: " + response.razorpay_payment_id + "\nদয়া করে WhatsApp-এ payment screenshot পাঠান।");
-          // open WhatsApp to notify shop with details (shop number from SHOP_NUMBER)
-          const waText = encodeURIComponent("আমি রেজিস্ট্রেশন করেছি। নাম: " + name + ", ফোন: " + phone + ", সার্ভিস: " + service + (note?(", নোট: "+note):"") + ", payment_id: " + response.razorpay_payment_id);
-          window.open("https://wa.me/" + SHOP_NUMBER + "?text=" + waText, "_blank");
-        },
-        "prefill": {"name": name, "contact": phone },
-        "theme": {"color": "#3399cc"}
-      };
-      const rzp = new Razorpay(options);
-      rzp.open();
-      e.preventDefault();
-    };
-  </script>
+  // Highlight active nav link on scroll
+  const navLinks = document.querySelectorAll('.navlink');
+  const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href')));
+  function onScroll(){
+    const scrollPos = window.scrollY + 90; // offset for sticky header
+    for(let i=0;i<sections.length;i++){
+      const s = sections[i];
+      if(!s) continue;
+      if(scrollPos >= s.offsetTop && scrollPos < s.offsetTop + s.offsetHeight){
+        navLinks.forEach(x=>x.classList.remove('active'));
+        navLinks[i].classList.add('active');
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll);
+  // ensure correct active on load
+  onScroll();
+
+  // Close mobile nav on link click
+  navLinks.forEach(link=>{
+    link.addEventListener('click', ()=>{
+      nav.classList.remove('open');
+    });
+  });
+</script>
+
 </body>
 </html>
-
