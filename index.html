@@ -1,575 +1,257 @@
-[11:09 AM, 9/9/2025] AZIZUL LASKAR: <!doctype html>
+<!doctype html>
 <html lang="bn">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KGN Mobile Care</title>
-
+  <title>KGN Mimo Care — Gallery + QR Scanner</title>
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:Arial, Helvetica, sans-serif;background:#f5f7fb;color:#111;line-height:1.6}
-
-    /* HEADER */
-    .header{background:#fff;border-bottom:1px solid #ddd;position:sticky;top:0;z-index:999}
-    .wrap{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-weight:700;font-size:20px}
-    nav ul{list-style:none;display:flex;gap:18px}
-    nav a{text-decoration:none;color:#222;padding:8px;border-radius:4px}
-    nav a.…
-[11:17 AM, 9/9/2025] AZIZUL LASKAR: <!doctype html>
-<html lang="bn">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KGN MIMO CARE</title>
-
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:Arial, Helvetica, sans-serif;background:#f5f7fb;color:#111;line-height:1.6}
-
-    /* HEADER */
-    .header{background:#fff;border-bottom:1px solid #ddd;position:sticky;top:0;z-index:999}
-    .wrap{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-weight:700;font-size:20px}
-    nav ul{list-style:none;display:flex;gap:18px}
-    nav a{text-decoration:none;color:#222;padding:8px;border-radius:4px}
-    nav a.ac…
-[11:41 AM, 9/9/2025] AZIZUL LASKAR: <!doctype html>
-<html lang="bn">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KGN Mimo Care</title>
-  <meta name="description" content="KGN Mimo Care — দ্রুত, সঠিক ও সাশ্রয়ী মোবাইল সার্ভিস। ২০ বছর অভিজ্ঞতা, ২০ জন টেকনিশিয়ান। অনলাইন বুকিং ও হোম ডেলিভারি।" />
-  <meta name="theme-color" content="#0b67ff">
-
-  <style>
-    /* ====== Basic reset & typography ====== */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Inter, 'Segoe UI', Arial, sans-serif;background:#f5f7fb;color:#111;line-height:1.5;-webkit-font-smoothing:antialiased}
-    a{color:inherit}
-    .container{max-width:1100px;margin:0 auto;padding:16px}
-
-    /* ====== Header ====== */
-    header.site-header{background:#fff;border-bottom:1px solid #e6eef9;position:sticky;top:0;z-index:999}
-    .wrap{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
-    .brand{font-weight:800;font-size:20px;color:#0b67ff}
-    nav.main-nav ul{list-style:none;display:flex;gap:14px;align-items:center}
-    nav a{display:inline-block;padding:8px 10px;border-radius:6px;text-decoration:none;color:#0f1724;font-weight:600}
-    nav a:hover{background:rgba(11,103,255,0.08)}
-    .menu-btn{display:none;background:none;border:0;font-size:22px;cursor:pointer}
-
-    @media(max-width:820px){
-      nav.main-nav ul{display:none;position:absolute;right:16px;top:64px;background:#fff;padding:12px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.12)}
-      nav.main-nav.open ul{display:flex;flex-direction:column;gap:8px}
-      .menu-btn{display:block}
-    }
-
-    /* ====== Hero ====== */
-    .hero{
-      background:
-        linear-gradient(rgba(0,128,255,0.62), rgba(0,200,150,0.62)),
-        url('mobile-bg.jpg') center/cover no-repeat;
-      color:#fff;text-align:center;padding:80px 16px;border-bottom:6px solid #eef7ff;
-    }
-    .hero h1{font-size:30px;margin-bottom:8px;line-height:1.15}
-    .hero p{max-width:820px;margin:0 auto 16px;color:rgba(255,255,255,0.95)}
-    .hero .cta{display:inline-flex;gap:10px;margin-top:12px;flex-wrap:wrap;justify-content:center}
-    .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
-    .btn-primary{background:#0527ff;color:#fff}
-    .btn-ghost{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.18)}
-
-    /* ====== Section cards ====== */
-    section{padding:28px 0}
-    .card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(12,36,75,0.04)}
-    h2{font-size:20px;margin-bottom:8px}
-    .muted{color:#52606d;font-size:14px}
-
-    /* ====== Items grid & cards ====== */
-    .items-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
-    .item-card{background:#ffffff;border:1px solid #eef6ff;padding:10px;border-radius:10px;display:flex;flex-direction:column;gap:8px}
-    .item-img{width:100%;height:150px;border-radius:8px;object-fit:cover;background:#f3f6ff;display:block}
-    .item-title{font-weight:700;font-size:15px}
-    .item-price{color:#0b67ff;font-weight:800}
-    .btn-small{display:inline-block;padding:8px 12px;border-radius:8px;border:0;background:#0b67ff;color:#fff;text-decoration:none;font-weight:700;cursor:pointer}
-
-    /* ====== Cart & form layout ====== */
-    .layout{display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start}
-    @media(max-width:980px){.layout{grid-template-columns:1fr}}
-    .cart-box{position:sticky;top:86px}
-    .cart-list{max-height:280px;overflow:auto;margin-top:8px;display:flex;flex-direction:column;gap:8px}
-    .cart-item{display:flex;justify-content:space-between;padding:8px;border-radius:8px;background:#fbfcff;border:1px solid #eef6ff}
-
-    /* ====== Admin add item ====== */
-    .admin-toggle{display:flex;gap:8px;align-items:center}
-    .admin-form{margin-top:8px;display:grid;gap:8px}
-    input[type=text], input[type=number], textarea, select{width:100%;padding:8px;border-radius:8px;border:1px solid #dde6f3}
-    input[type=file]{padding:6px}
-
-    /* ====== Footer ====== */
-    footer.site-foot{margin-top:24px;padding:18px;text-align:center;color:#5b6b7a;font-size:14px}
-
-    /* small helpers */
-    .muted-sm{font-size:13px;color:#6b7b8a}
-    .badge{display:inline-block;background:#f0f8ff;color:#024; padding:6px 8px;border-radius:8px;font-weight:700}
+    body{font-family:Arial,Helvetica,sans-serif;margin:12px;background:#f6f8fb;color:#102033}
+    h2{margin-bottom:6px}
+    .card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(16,32,51,0.06)}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    .tabs{display:flex;gap:8px;margin-top:8px}
+    .tab{padding:8px 12px;border-radius:8px;background:#eef6ff;color:#024;cursor:pointer}
+    .tab.active{background:#0b67ff;color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px}
+    .thumb{background:#fff;border-radius:8px;padding:8px;border:1px solid #e8f0ff;display:flex;flex-direction:column;gap:8px}
+    .thumb img{width:100%;height:140px;object-fit:cover;border-radius:6px;background:#f3f6ff}
+    .small{font-size:13px;color:#556}
+    .btn{background:#0b67ff;color:#fff;padding:8px 10px;border-radius:8px;border:0;cursor:pointer}
+    .btn-ghost{background:#eef6ff;color:#024;padding:8px 10px;border-radius:8px;border:0;cursor:pointer}
+    .modal{display:none;position:fixed;inset:0;background:rgba(2,6,23,0.6);align-items:center;justify-content:center;padding:18px}
+    .modal-inner{max-width:900px;width:100%;background:#fff;padding:14px;border-radius:10px;position:relative}
+    textarea{width:100%;padding:8px;border-radius:8px;border:1px solid #dde6f3}
+    #qr-reader{width:320px;margin-top:8px}
+    .note{font-size:13px;color:#445;margin-top:8px}
+    .controls{display:flex;gap:8px;flex-wrap:wrap}
   </style>
+
+  <!-- html5-qrcode for scanning -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/minified/html5-qrcode.min.js"></script>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header" role="banner">
-    <div class="wrap" role="navigation" aria-label="Main">
-      <div class="brand">KGN Mimo Care</div>
-
-      <nav class="main-nav" id="mainNav">
-        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">☰</button>
-        <ul>
-          <li><a class="navlink" href="#home">Home</a></li>
-          <li><a class="navlink" href="#services">Services</a></li>
-          <li><a class="navlink" href="#items">Items</a></li>
-          <li><a class="navlink" href="#booking">Booking</a></li>
-          <li><a class="navlink" href="#delivery">Delivery</a></li>
-          <li><a class="navlink" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <div class="card top">
+    <div>
+      <h2>KGN Mimo Care — Gallery</h2>
+      <div class="note">Upload photos (camera or file). Each image has note + QR. Scan QR to open image.</div>
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section id="home" class="hero" role="region" aria-label="Hero">
-    <div class="container">
-      <h1>KGN Mimo Care — দ্রুত, সঠিক ও সাশ্রয়ী মোবাইল সার্ভিস</h1>
-      <p>২০ বছরের অভিজ্ঞতা • ২০ জন দক্ষ টেকনিশিয়ান • চিপ-লেভেল সার্ভিস • দ্রুত হোম ডেলিভারি</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#items">Shop / Items</a>
-        <a class="btn btn-ghost" href="#booking">বুকিং করুন</a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="tabs" id="tabs">
+        <div class="tab active" data-cat="technicians">Technicians</div>
+        <div class="tab" data-cat="shop">Shop</div>
       </div>
+      <input id="fileInput" type="file" accept="image/*" capture="environment" style="display:none">
+      <button id="pickBtn" class="btn">Upload / Take Photo</button>
     </div>
-  </section>
+  </div>
 
-  <!-- ABOUT -->
-  <section id="about" class="container">
-    <div class="card">
-      <h2>কেন KGN Mimo Care?</h2>
-      <ul style="margin-top:8px;line-height:1.6">
-        <li><strong>২০ বছরের অভিজ্ঞতা</strong> — গ্রাহকদের আস্থা।</li>
-        <li><strong>২০ জন টেকনিশিয়ান</strong> — দক্ষ ও পেশাদার।</li>
-        <li><strong>IC-Level (Chip-level) Repair</strong> — উন্নত মাইক্রোস্কোপ ও টুলস।</li>
-        <li><strong>খুব কম রেটে কাজ</strong> — সাশ্রয়ী মূল্য।</li>
-        <li><strong>৯৯% সফলতা</strong> — অধিকাংশ কাজ সমাধান হয়।</li>
-        <li><strong>রিটার্ন কাজ সমাধান</strong> — অন্যদের ফেরত আসা কাজও আমরা ঠিক করি।</li>
-        <li><strong>ডিলারদের জন্য বিশেষ সুবিধা</strong> — হোলসেল ও রিটেল সাপোর্ট।</li>
-      </ul>
-    </div>
-  </section>
+  <div id="grid" class="grid" style="margin-top:12px"></div>
 
-  <!-- ITEMS + CART + ADMIN -->
-  <section id="items" class="container" aria-label="Products and Order">
-    <div class="layout">
-      <!-- left: items -->
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <h2>Our Items / Products</h2>
-          <div class="badge">Shop: Items</div>
-        </div>
-        <p class="muted-sm">আইটেমে ক্লিক করে "Add to cart" করো — পরে Booking ফর্মে সব আইটেম চলে যাবে।</p>
-
-        <div id="itemsGrid" class="items-grid" aria-live="polite">
-          <!-- JS will render items here -->
-        </div>
-
-        <!-- Admin area (owner use) -->
-        <div style="margin-top:12px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <div class="muted-sm">Owner: Add item (local)</div>
-            <button id="toggleAdmin" class="btn-small" style="background:#0f1724">Owner Add</button>
-          </div>
-
-          <div id="adminPanel" style="display:none;margin-top:8px">
-            <div class="card admin-form">
-              <label>Item name</label>
-              <input id="adminName" type="text" placeholder="Display - Samsung A03">
-              <label>Price (₹)</label>
-              <input id="adminPrice" type="number" placeholder="1999">
-              <label>Image (jpg/png)</label>
-              <input id="adminImage" type="file" accept="image/*">
-              <div style="display:flex;gap:8px">
-                <button id="addItemBtn" class="btn-small" style="background:#0b67ff">Add item</button>
-                <button id="exportItems" class="btn-small" style="background:#06b6d4">Export JSON</button>
-                <button id="clearItemsLocal" class="btn-small" style="background:#ef4444">Clear All</button>
-              </div>
-              <div class="muted-sm">নোট: এই admin-local ফিচারটি ব্রাউজারের localStorage ব্যবহার করে — সার্ভারে পাস করবে না।</div>
+  <!-- modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="closeModal" style="position:absolute;right:12px;top:12px;background:#ef4444;color:#fff;border:0;padding:6px 8px;border-radius:6px;cursor:pointer">Close</button>
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:12px">
+        <div>
+          <img id="modalImg" src="" alt="" style="width:100%;height:420px;object-fit:contain;border-radius:8px;background:#f3f6ff" />
+          <div style="margin-top:8px"><strong id="modalTitle"></strong><div id="modalMeta" class="small"></div></div>
+          <div style="margin-top:8px">
+            <label>Comment / Note</label>
+            <textarea id="modalComment" rows="4" placeholder="Work notes, tech name, serial no..."></textarea>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button id="saveComment" class="btn">Save Note</button>
+              <button id="downloadImg" class="btn-ghost">Download Image</button>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- right: cart & order summary -->
-      <aside class="cart-box">
-        <div class="card">
-          <h3>Cart Summary</h3>
-          <div id="cartList" class="cart-list" aria-live="polite">
-            <div class="muted-sm">No items yet</div>
-          </div>
-
-          <div style="margin-top:10px">
-            <div style="display:flex;justify-content:space-between"><div class="muted-sm">Subtotal</div><div id="subtotal">₹0</div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:6px"><div class="muted-sm">Booking fee</div><div>₹49</div></div>
-
+        <aside>
+          <div style="text-align:center">
+            <div style="margin-bottom:8px"><strong>QR for this image</strong></div>
+            <img id="qrPreview" src="" alt="QR" style="width:220px;height:220px;border:1px solid #eef6ff;border-radius:8px">
             <div style="margin-top:8px">
-              <label class="muted-sm">Discount type</label>
-              <select id="discountType" style="width:100%;padding:8px;border-radius:8px;border:1px solid #dde6f3;margin-top:6px">
-                <option value="0">No discount</option>
-                <option value="10">Web booking — 10%</option>
-                <option value="20">Form + Advance — 20%</option>
-                <option value="30">Special Offer — 30%</option>
-                <option value="50">Dealer / Special — 50%</option>
-              </select>
+              <a id="downloadQR" class="btn-ghost" style="display:inline-block;padding:8px 10px;border-radius:8px;text-decoration:none">Download QR</a>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <div class="small">Actions:</div>
+            <div class="controls" style="margin-top:8px">
+              <button id="copyLink" class="btn-ghost">Copy Link</button>
+              <button id="shareBtn" class="btn">Share (Phone)</button>
             </div>
 
-            <div style="display:flex;justify-content:space-between;margin-top:10px;font-weight:800">
-              <div>Total</div><div id="totalAmount">₹0</div>
+            <div class="note" style="margin-top:12px">Tip: Print QR on ticket — scan to open photo & notes.</div>
+            <div style="margin-top:10px">
+              <strong>QR Scanner</strong>
+              <div id="qr-reader"></div>
+              <div class="note">Open scanner and point camera at QR; page will open that image.</div>
             </div>
-
-            <div style="display:flex;gap:8px;margin-top:12px">
-              <button id="proceedBtn" class="btn-small" style="background:#10b981">Proceed to Order</button>
-              <button id="clearCartBtn" class="btn-small" style="background:#ef4444">Clear</button>
-            </div>
-            <div class="muted-sm" style="margin-top:8px">Booking fee ₹49 will be adjusted from final bill. Delivery requires advance payment if selected.</div>
           </div>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- BOOKING / ORDER FORM -->
-  <section id="booking" class="container">
-    <div class="card">
-      <h2>Order / Booking Form</h2>
-      <p class="muted-sm">ফর্মটি পূরণ করে সাবমিট করলেই অর্ডার রিকোয়েস্ট জমা হবে — নিচে আপনি Netlify বা অন্য endpoint সেট করে পাঠাতে পারবেন।</p>
-
-      <!-- Netlify-ready form (name=form-order) -->
-      <form id="orderForm" name="order-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="order-form">
-        <input type="hidden" name="order_json" id="order_json">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
-          <div><label>নাম</label><input id="custName" name="name" type="text" required></div>
-          <div><label>মোবাইল নম্বর</label><input id="custPhone" name="phone" type="tel" required placeholder="7001181931"></div>
-        </div>
-        <div style="margin-top:8px">
-          <label>ঠিকানা (ডেলিভারি হলে)</label>
-          <textarea id="custAddress" name="address" rows="2" placeholder="নামতা/ল্যান্ডমার্ক"></textarea>
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
-          <div>
-            <label>Payment option</label>
-            <select id="paymentMethod" name="paymentMethod">
-              <option value="online">Pay Online (advance required for delivery)</option>
-              <option value="at-store">Pay at Store (collect at shop)</option>
-            </select>
-          </div>
-          <div>
-            <label>Booking fee charged</label>
-            <input type="text" value="₹49 (adjusted from final bill)" readonly style="padding:8px;border-radius:8px;border:1px solid #dde6f3">
-          </div>
-        </div>
-
-        <div style="margin-top:10px">
-          <label>Order summary (items)</label>
-          <textarea id="orderSummary" name="order_summary" rows="4" readonly placeholder="Your items will appear here"></textarea>
-        </div>
-
-        <div style="display:flex;gap:8px;margin-top:12px">
-          <button type="submit" class="btn-small" style="background:#0b67ff">Submit Order</button>
-          <button type="button" id="fillFromCart" class="btn-small" style="background:#06b6d4">Fill from Cart</button>
-          <button type="reset" class="btn-small" style="background:#e2e8f0;color:#111">Reset</button>
-        </div>
-
-        <p class="muted-sm" style="margin-top:8px">নোট: ডেলিভারির জন্য advance (online) পেমেন্ট নেওয়া হতে পারে — COD না হলে আগে পেমেন্ট করতে হবে।</p>
-      </form>
-
-      <div class="muted-sm" style="margin-top:10px">
-        <strong>Setup note:</strong> If you host on Netlify, the data-netlify="true" attribute will let Netlify capture form submissions. Alternatively, replace form's action with a Formspree / server endpoint.
+        </aside>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- DELIVERY -->
-  <section id="delivery" class="container">
-    <div class="card">
-      <h2>হোম ডেলিভারি</h2>
-      <p class="muted-sm">কাস্টমার অনলাইনে ফরম পূরণ করে অর্ডার দিলে আমরা ডেলিভারি করব। ডেলিভারির ক্ষেত্রে advance payment চাইতে পারি — তা পেমেন্ট সফল হলে অর্ডার প্রসেস করা হবে।</p>
-      <ul style="margin-top:8px;line-height:1.6">
-        <li>অর্ডার কনফার্ম হয়ে ডেলিভারি করা হবে।</li>
-        <li><strong>ক্যাশ অন ডেলিভারি নেই</strong> — advance payment হলে দ্রুত ডেলিভারি।</li>
-        <li>বুকিং ফি ₹49 পরে বিল থেকে কেটে নেওয়া হবে।</li>
-      </ul>
-    </div>
-  </section>
+<script>
+/* Simple gallery + QR + scanner demo (client-side, localStorage) */
+const STORAGE_KEY = 'kgn_gallery_v1';
+let state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+state.technicians = state.technicians || [];
+state.shop = state.shop || [];
+let currentCategory = 'technicians';
+let currentIndex = null;
 
-  <!-- TRAINING -->
-  <section id="training" class="container">
-    <div class="card">
-      <h2>Training</h2>
-      <p class="muted-sm">Online (Zoom/Meet) ও Offline (Workshop) দু'রকম ট্রেনিং দেয়া হয় — বিস্তারিত জানতে যোগাযোগ করুন।</p>
-    </div>
-  </section>
+// DOM
+const tabs = document.getElementById('tabs');
+const grid = document.getElementById('grid');
+const pickBtn = document.getElementById('pickBtn');
+const fileInput = document.getElementById('fileInput');
+const modal = document.getElementById('modal');
+const closeModal = document.getElementById('closeModal');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalMeta = document.getElementById('modalMeta');
+const modalComment = document.getElementById('modalComment');
+const saveComment = document.getElementById('saveComment');
+const qrPreview = document.getElementById('qrPreview');
+const downloadQR = document.getElementById('downloadQR');
+const copyLink = document.getElementById('copyLink');
+const shareBtn = document.getElementById('shareBtn');
+const downloadImg = document.getElementById('downloadImg');
 
-  <!-- CONTACT -->
-  <section id="contact" class="container">
-    <div class="card">
-      <h2>Contact</h2>
-      <p><strong>Branches:</strong></p>
-      <p>PNB ব্যাংকের পাশে, বিল্ডিং-এর ২য় তলা<br>নতুন রোড, অটো স্ট্যান্ডের পাশে</p>
+// util
+function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+function uid(){ return 'id'+Date.now() + Math.floor(Math.random()*99); }
+function viewerUrl(id,cat){ return window.location.origin + window.location.pathname + '#img=' + encodeURIComponent(id) + '&cat=' + encodeURIComponent(cat); }
+function qrUrlFor(link){ return 'https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=' + encodeURIComponent(link); }
 
-      <p style="margin-top:10px"><strong>ফোন:</strong>
-        <a href="tel:+917001181931">7001181931</a>,
-        <a href="tel:+919682758151">9682758151</a>,
-        <a href="tel:+919153644541">9153644541</a>
-      </p>
+// render grid
+function renderGrid(){
+  grid.innerHTML = '';
+  const list = state[currentCategory] || [];
+  if(!list.length){ grid.innerHTML = '<div class="card" style="padding:16px">No images yet — use Upload / Take Photo</div>'; return; }
+  list.forEach((it, idx)=>{
+    const div = document.createElement('div'); div.className='thumb card';
+    const img = document.createElement('img'); img.src = it.data; img.alt = it.name || 'image';
+    const title = document.createElement('div'); title.style.fontWeight='700'; title.textContent = it.name || ('Image ' + (idx+1));
+    const note = document.createElement('div'); note.className='small'; note.textContent = it.note ? it.note.substring(0,60) : '';
+    const meta = document.createElement('div'); meta.style.display='flex'; meta.style.justifyContent='space-between';
+    const open = document.createElement('button'); open.className='btn-ghost'; open.textContent='Open';
+    open.addEventListener('click', ()=> openModal(idx));
+    const del = document.createElement('button'); del.className='btn-ghost'; del.textContent='Remove';
+    del.addEventListener('click', ()=> { if(confirm('Remove this image?')){ state[currentCategory].splice(idx,1); saveState(); renderGrid(); }});
+    meta.appendChild(open); meta.appendChild(del);
+    div.appendChild(img); div.appendChild(title); div.appendChild(note); div.appendChild(meta);
+    grid.appendChild(div);
+  });
+}
 
-      <div style="display:flex;gap:8px;margin-top:8px">
-        <a class="btn" href="tel:+917001181931" style="background:#10b981;color:#fff;border-radius:8px;padding:10px 12px;text-decoration:none">📞 Call</a>
-        <a class="btn" href="https://wa.me/917001181931" target="_blank" rel="noopener" style="background:#25D366;color:#fff;border-radius:8px;padding:10px 12px;text-decoration:none">💬 WhatsApp</a>
-      </div>
+// tabs
+tabs.addEventListener('click', e=>{
+  const t = e.target.closest('.tab'); if(!t) return;
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  currentCategory = t.dataset.cat;
+  renderGrid();
+});
 
-      <p class="muted-sm" style="margin-top:10px">Email: <a href="mailto:mimocare2025@gmail.com">mimocare2025@gmail.com</a> | Website email: <a href="mailto:info@kgnmimocare.com">info@kgnmimocare.com</a></p>
+// upload
+pickBtn.addEventListener('click', ()=> fileInput.click());
+fileInput.addEventListener('change', e=>{
+  const f = e.target.files[0]; if(!f) return;
+  const name = prompt('Name for photo (optional):', f.name) || f.name;
+  const reader = new FileReader();
+  reader.onload = function(ev){
+    const data = ev.target.result;
+    state[currentCategory].unshift({ id: uid(), name, data, note:'', created: new Date().toISOString() });
+    saveState(); renderGrid(); fileInput.value='';
+  };
+  reader.readAsDataURL(f);
+});
 
-      <p class="muted-sm" style="margin-top:8px"><strong>Timing:</strong> প্রতিদিন সকাল ৯টা – রাত ৯টা</p>
-    </div>
-  </section>
+// modal open
+function openModal(idx){
+  const item = state[currentCategory][idx];
+  if(!item) return;
+  currentIndex = idx;
+  modalImg.src = item.data;
+  modalTitle.textContent = item.name || 'Image';
+  modalMeta.textContent = 'Uploaded: ' + new Date(item.created).toLocaleString();
+  modalComment.value = item.note || '';
+  // QR
+  const link = viewerUrl(item.id, currentCategory);
+  const qr = qrUrlFor(link);
+  qrPreview.src = qr;
+  downloadQR.href = qr;
+  downloadQR.download = (item.name||'img')+'_qr.png';
+  copyLink.onclick = async ()=>{
+    try{ await navigator.clipboard.writeText(link); alert('Link copied'); } catch(e){ prompt('Copy link:', link); }
+  };
+  shareBtn.onclick = async ()=>{
+    if(navigator.share){ try{ await navigator.share({title:item.name,text:'KGN Mimo Care image',url:link}); }catch(e){alert('Share canceled');} }
+    else alert('Share not supported on this device');
+  };
+  downloadImg.onclick = ()=> { const a=document.createElement('a'); a.href=item.data; a.download=(item.name||'img')+'.png'; a.click(); };
+  modal.style.display='flex'; modal.setAttribute('aria-hidden','false');
+}
 
-  <footer class="site-foot">
-    © 2025 KGN Mimo Care — ২০ বছরের অভিজ্ঞতা • ২০ জন টেকনিশিয়ান
-  </footer>
+// save comment
+saveComment.addEventListener('click', ()=>{
+  if(currentIndex===null) return;
+  state[currentCategory][currentIndex].note = modalComment.value.trim();
+  saveState(); renderGrid(); alert('Note saved');
+});
 
-  <!-- ====== Scripts ====== -->
-  <script>
-    /* ====== Configuration ====== */
-    // If you want order submission to actually POST to your server, set FORM_ENDPOINT.
-    // Example: FORM_ENDPOINT = 'https://formspree.io/f/xxxx' or leave empty to use Netlify (data-netlify="true").
-    const FORM_ENDPOINT = ''; // <-- set to your endpoint if needed
+// close
+closeModal.addEventListener('click', ()=> { modal.style.display='none'; modal.setAttribute('aria-hidden','true'); currentIndex=null; });
 
-    /* ====== Utilities ====== */
-    function qs(sel){ return document.querySelector(sel); }
-    function qsa(sel){ return Array.from(document.querySelectorAll(sel)); }
-    function formatINR(n){ return '₹' + Number(n).toLocaleString('en-IN'); }
+// hash open handler (scan link opens same page hash)
+function checkHash(){
+  const h = location.hash;
+  if(!h) return;
+  const re = /img=([^&]+).*cat=([^&]+)/;
+  const m = h.match(re);
+  if(!m) return;
+  const id = decodeURIComponent(m[1]); const cat = decodeURIComponent(m[2]);
+  const list = state[cat] || [];
+  const idx = list.findIndex(x=>x.id===id);
+  if(idx>=0){ currentCategory=cat; document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active', x.dataset.cat===cat)); renderGrid(); openModal(idx); }
+}
+window.addEventListener('hashchange', checkHash);
+setTimeout(checkHash,500);
 
-    /* ====== ITEMS: load from localStorage or default sample ====== */
-    const STORAGE_ITEMS = 'kgn_items_v1';
-    const STORAGE_CART = 'kgn_cart_v1';
+// simple QR scanner using html5-qrcode
+let qrScanner = null;
+function startScanner(){
+  const readerElem = document.getElementById('qr-reader');
+  if(qrScanner) return;
+  qrScanner = new Html5Qrcode(/* element id */ "qr-reader");
+  qrScanner.start({ facingMode: "environment" }, { fps: 10, qrbox: 250 },
+    (decodedText) => {
+      // open decoded link
+      window.location.href = decodedText;
+      qrScanner.stop();
+      qrScanner = null;
+    },
+    (errorMessage) => {
+      // ignore
+    }).catch(err=>{ console.error('QR start failed', err); alert('Scanner start failed: ' + err.message); });
+}
 
-    const defaultItems = [
-      { id: 'i1', name: 'Display - Samsung A03', price: 1999, img: '' },
-      { id: 'i2', name: 'Battery - Generic 3000mAh', price: 499, img: '' },
-      { id: 'i3', name: 'Charging IC Repair', price: 899, img: '' }
-    ];
+// start scanner when modal opens (optional)
+modal.addEventListener('click', (e)=>{
+  // if clicked QR area start scan? not needed
+});
+document.addEventListener('DOMContentLoaded', ()=>{ renderGrid(); });
 
-    let items = JSON.parse(localStorage.getItem(STORAGE_ITEMS) || 'null') || defaultItems;
-    let cart = JSON.parse(localStorage.getItem(STORAGE_CART) || '[]');
+// for convenience, start scanner region when user clicks the QR preview (so they can scan another QR)
+qrPreview.addEventListener('click', ()=> {
+  if(confirm('Open QR scanner to scan a QR and open linked image?')) startScanner();
+});
 
-    /* ====== Render items ====== */
-    function renderItems(){
-      const grid = qs('#itemsGrid');
-      grid.innerHTML = '';
-      items.forEach(it=>{
-        const card = document.createElement('div');
-        card.className = 'item-card';
-        card.setAttribute('data-id', it.id);
-
-        const img = document.createElement('img');
-        img.className = 'item-img';
-        img.alt = it.name;
-        img.src = it.img || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400"><rect width="100%" height="100%" fill="%23eef6ff"/></svg>';
-
-        const title = document.createElement('div'); title.className = 'item-title'; title.textContent = it.name;
-        const price = document.createElement('div'); price.className = 'item-price'; price.textContent = formatINR(it.price);
-        const btn = document.createElement('button'); btn.className = 'btn-small'; btn.textContent = 'Add to cart';
-        btn.addEventListener('click', ()=> addToCart(it.id));
-
-        card.appendChild(img);
-        card.appendChild(title);
-        card.appendChild(price);
-        card.appendChild(btn);
-        grid.appendChild(card);
-      });
-    }
-
-    /* ====== Cart functions ====== */
-    function saveCart(){ localStorage.setItem(STORAGE_CART, JSON.stringify(cart)); }
-    function addToCart(id){
-      const it = items.find(x=>x.id===id); if(!it) return;
-      cart.push({...it}); saveCart(); renderCart();
-      alert(it.name + ' added to cart');
-    }
-    function clearCart(){ cart=[]; saveCart(); renderCart(); }
-
-    function renderCart(){
-      const list = qs('#cartList');
-      list.innerHTML = '';
-      if(cart.length===0){ list.innerHTML = '<div class="muted-sm">Cart is empty</div>'; qs('#subtotal').textContent='₹0'; qs('#totalAmount').textContent='₹0'; return; }
-      cart.forEach((c, idx)=>{
-        const div = document.createElement('div'); div.className='cart-item';
-        div.innerHTML = <div>${c.name}</div><div>${formatINR(c.price)} <button aria-label="remove" data-idx="${idx}" style="margin-left:8px;background:transparent;border:0;cursor:pointer">✖</button></div>;
-        list.appendChild(div);
-      });
-      qsa('[data-idx]').forEach(btn=>btn.addEventListener('click', (e)=>{
-        const i = Number(e.target.getAttribute('data-idx')); cart.splice(i,1); saveCart(); renderCart();
-      }));
-      const sub = cart.reduce((s,x)=>s+Number(x.price),0);
-      qs('#subtotal').textContent = formatINR(sub);
-      updateTotal();
-    }
-
-    function updateTotal(){
-      const sub = cart.reduce((s,x)=>s+Number(x.price),0);
-      const fee = 49;
-      const discPerc = Number(qs('#discountType').value || 0);
-      const discount = Math.round((sub * discPerc)/100);
-      const total = Math.max(0, sub + fee - discount);
-      qs('#totalAmount').textContent = formatINR(total);
-    }
-
-    /* ====== Admin add item (localStorage) ====== */
-    qs('#toggleAdmin').addEventListener('click', ()=>{
-      const panel = qs('#adminPanel');
-      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
-    });
-
-    qs('#addItemBtn').addEventListener('click', async ()=>{
-      const name = qs('#adminName').value.trim();
-      const price = Number(qs('#adminPrice').value);
-      const file = qs('#adminImage').files[0];
-      if(!name || !price){ alert('Name and price required'); return; }
-      let imgData = '';
-      if(file){
-        imgData = await readFileAsDataURL(file);
-      }
-      const id = 'i' + Date.now();
-      items.push({id, name, price, img: imgData});
-      localStorage.setItem(STORAGE_ITEMS, JSON.stringify(items));
-      qs('#adminName').value=''; qs('#adminPrice').value=''; qs('#adminImage').value='';
-      renderItems(); alert('Item added locally (for this browser).');
-    });
-
-    qs('#exportItems').addEventListener('click', ()=>{
-      const data = JSON.stringify(items, null, 2);
-      const blob = new Blob([data], {type:'application/json'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a'); a.href = url; a.download = 'items.json'; a.click();
-      URL.revokeObjectURL(url);
-    });
-
-    qs('#clearItemsLocal').addEventListener('click', ()=>{
-      if(confirm('Clear all custom items and reset to defaults?')){ localStorage.removeItem(STORAGE_ITEMS); items = defaultItems.slice(); renderItems(); }
-    });
-
-    function readFileAsDataURL(file){ return new Promise((res,rej)=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.onerror=rej; fr.readAsDataURL(file); }); }
-
-    /* ====== Cart controls ====== */
-    qs('#clearCartBtn').addEventListener('click', ()=>{ if(confirm('Clear cart?')){ clearCart(); }});
-    qs('#discountType').addEventListener('change', updateTotal);
-    qs('#proceedBtn').addEventListener('click', ()=>{ // scroll to booking & fill summary
-      document.getElementById('orderSummary').value = cart.map(it=>${it.name} — ₹${it.price}).join('\n');
-      document.getElementById('order_json').value = JSON.stringify({items:cart});
-      document.getElementById('custName').focus();
-      window.location.hash = 'booking';
-    });
-
-    /* ====== Fill from cart button ====== */
-    qs('#fillFromCart').addEventListener('click', ()=>{
-      qs('#orderSummary').value = cart.map(it=>${it.name} — ₹${it.price}).join('\n');
-      qs('#order_json').value = JSON.stringify({items:cart});
-      alert('Order summary filled from cart. Now complete your details and submit.');
-    });
-
-    /* ====== Form submit handling ====== */
-    qs('#orderForm').addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const name = qs('#custName').value.trim();
-      const phone = qs('#custPhone').value.trim();
-      if(!name || !phone){ alert('নাম ও ফোন নম্বর দিন'); return; }
-      const payload = {
-        name, phone, address: qs('#custAddress').value.trim(),
-        payment: qs('#paymentMethod').value,
-        items: cart,
-        subtotal: cart.reduce((s,x)=>s+Number(x.price),0),
-        bookingFee: 49,
-        discountType: qs('#discountType').value,
-        total: qs('#totalAmount').textContent
-      };
-
-      // If FORM_ENDPOINT specified, try to POST there (e.g., Formspree)
-      if(FORM_ENDPOINT){
-        fetch(FORM_ENDPOINT, {
-          method:'POST',
-          headers:{'Content-Type':'application/json'},
-          body: JSON.stringify(payload)
-        }).then(r=>{
-          if(r.ok){ alert('Order sent — we will contact you soon.'); qs('#orderForm').reset(); clearCart(); }
-          else { alert('Submission failed — check console.'); console.error('Form error', r); }
-        }).catch(err=>{ alert('Submission error — check console.'); console.error(err); });
-        return;
-      }
-
-      // If Netlify (data-netlify), we can fallback to a fetch to same page (Netlify will capture standard POST)
-      // Build FormData and post to same page if needed
-      if(document.querySelector('form[data-netlify]')){
-        const fd = new FormData();
-        fd.append('form-name', 'order-form');
-        fd.append('name', payload.name);
-        fd.append('phone', payload.phone);
-        fd.append('address', payload.address);
-        fd.append('order_json', JSON.stringify(payload));
-        // Netlify captures this when deployed
-        fetch('/', { method:'POST', body: fd })
-          .then(()=>{ alert('Order submitted (Netlify). আমরা শীঘ্রই যোগাযোগ করবো।'); qs('#orderForm').reset(); clearCart(); })
-          .catch(err=>{ alert('Submission failed — check hosting setup.'); console.error(err); });
-        return;
-      }
-
-      // Default: show preview and copy to console
-      console.log('Order payload', payload);
-      alert('Order ready (demo). Console এ বিস্তারিত দেখুন।');
-      qs('#orderForm').reset();
-      clearCart();
-    });
-
-    /* ====== Utility: Nav menu toggle and active highlight ====== */
-    const menuBtn = document.getElementById('menuBtn');
-    const mainNav = document.querySelector('nav.main-nav');
-    if(menuBtn && mainNav){
-      menuBtn.addEventListener('click', ()=>{
-        const open = mainNav.classList.toggle('open');
-        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-
-    const navLinks = qsa('.navlink');
-    const sections = navLinks.map(a=>{
-      const sel = a.getAttribute('href');
-      try{ return document.querySelector(sel); } catch(e){ return null; }
-    }).filter(Boolean);
-
-    function onScroll(){
-      const pos = window.scrollY + 120;
-      sections.forEach((s,i)=>{
-        if(s && pos >= s.offsetTop && pos < s.offsetTop + s.offsetHeight){
-          navLinks.forEach(x=>x.classList.remove('active'));
-          if(navLinks[i]) navLinks[i].classList.add('active');
-        }
-      });
-    }
-    window.addEventListener('scroll', onScroll);
-
-    /* ====== Init render ====== */
-    renderItems();
-    renderCart();
-    onScroll();
-  </script>
+</script>
 </body>
 </html>
