@@ -3,65 +3,49 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MiMoCare - Home</title>
+  <title>KGN MIMO CARE</title>
 
   <style>
-    /* সরল রিসেট */
-    *{box-sizing:border-box;margin:0;padding:0}
+    *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{font-family: 'Helvetica Neue', Arial, sans-serif;background:#f7f7f7;color:#111;line-height:1.5}
+    body{font-family:Arial, Helvetica, sans-serif;background:#f5f7fb;color:#111;line-height:1.6}
 
-    /* Header / Navbar */
-    .header{
-      background:#fff;
-      border-bottom:1px solid #e6e6e6;
-      position:sticky;
-      top:0;
-      z-index:9999;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-    }
-    .wrap{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .logo{display:flex;align-items:center;gap:8px}
-    .logo .kgn{font-weight:800;font-size:20px;letter-spacing:1px}
-    .logo .brand{font-size:18px;color:#222}
-    /* nav - desktop */
-    nav{display:flex;align-items:center;gap:18px}
-    nav ul{display:flex;gap:18px;list-style:none;align-items:center}
-    nav a{color:#222;text-decoration:none;padding:8px 6px;border-radius:4px;font-weight:500}
-    nav a.active, nav a:hover{background:#f0f0f0}
-    /* small contact box (right) */
-    .top-contact{display:flex;flex-direction:column;align-items:flex-end;font-size:13px;color:#444}
-    .top-contact a{color:#111;text-decoration:none;font-weight:700}
+    /* HEADER */
+    .header{background:#fff;border-bottom:1px solid #ddd;position:sticky;top:0;z-index:999}
+    .wrap{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;font-size:20px}
+    nav ul{list-style:none;display:flex;gap:18px}
+    nav a{text-decoration:none;color:#222;padding:8px;border-radius:4px}
+    nav a.active, nav a:hover{color:#0077cc;border-bottom:2px solid #0077cc}
+    .menu-btn{display:none}
 
-    /* Mobile */
-    .menu-btn{display:none;background:transparent;border:0;font-size:22px;cursor:pointer}
-    @media (max-width:820px){
-      .wrap{padding:8px 12px}
-      nav ul{display:none;flex-direction:column;position:absolute;right:12px;top:64px;background:#fff;padding:12px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.12)}
+    @media(max-width:820px){
+      nav ul{display:none;flex-direction:column;position:absolute;right:16px;top:64px;background:#fff;padding:12px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.12)}
       nav.open ul{display:flex}
-      .menu-btn{display:block}
-      .top-contact{display:none}
+      .menu-btn{display:block;background:none;border:none;font-size:24px}
     }
 
-    /* Hero / content layout */
-    .hero{padding:34px 16px;background:linear-gradient(180deg,#fff,#fbfbfb)}
-    .container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
-    .card{background:#fff;padding:18px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.04)}
-    .hero h1{font-size:24px;margin-bottom:8px}
-    .hero p{color:#444}
+    /* HERO */
+    .hero{
+      background:linear-gradient(rgba(0,50,100,0.6), rgba(0,0,0,0.6)),
+                 url('mobile-bg.jpg') center/cover no-repeat;
+      color:#fff;text-align:center;padding:90px 20px;
+    }
+    .hero h1{font-size:30px;margin-bottom:12px}
+    .hero p{max-width:780px;margin:0 auto 18px;color:#f0f6ff}
 
-    /* smaller sections */
-    .section{max-width:1100px;margin:18px auto;padding:0 16px}
-    .section .card{padding:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:600}
+    .btn-primary{background:#0b67ff;color:#fff}
+    .btn-light{background:rgba(255,255,255,0.15);border:1px solid #fff;color:#fff}
 
-    /* services grid */
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px}
-    .service-item{background:#fff;padding:12px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
+    /* SECTION */
+    .section{max-width:1100px;margin:40px auto;padding:0 16px}
+    .card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.05);margin-bottom:20px}
 
-    /* Footer */
-    footer{margin-top:28px;padding:20px;text-align:center;color:#666;font-size:14px}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .service-item{background:#f9fbff;padding:16px;border-radius:8px;border:1px solid #eef6ff}
 
-    /* small helpers */
+    footer{margin-top:30px;padding:20px;text-align:center;color:#666;font-size:14px}
     .muted{color:#666;font-size:14px}
   </style>
 </head>
@@ -70,62 +54,41 @@
   <!-- HEADER -->
   <header class="header">
     <div class="wrap">
-      <div class="logo">
-        <!-- যদি ছবি লোগো দিতে চাও, img ট্যাগ ব্যবহার করো এবং নিচের text hide করো -->
-        <!-- <img src="logo.png" alt="MiMoCare" style="height:44px"> -->
-        <div class="kgn">KGN</div>
-        <div class="brand">MiMoCare</div>
-      </div>
-
+      <div class="logo">KGN Mimo Care</div>
       <nav id="mainNav">
-        <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
+        <button class="menu-btn" id="menuBtn">☰</button>
         <ul>
           <li><a href="#home" class="navlink">Home</a></li>
-          <li><a href="#about" class="navlink">About</a></li>
           <li><a href="#services" class="navlink">Services</a></li>
-          <li><a href="#training" class="navlink">Training</a></li>
           <li><a href="#booking" class="navlink">Booking</a></li>
+          <li><a href="#delivery" class="navlink">Delivery</a></li>
+          <li><a href="#training" class="navlink">Training</a></li>
           <li><a href="#contact" class="navlink">Contact</a></li>
         </ul>
       </nav>
-
-      <div class="top-contact">
-        <div class="muted">Call / WhatsApp</div>
-        <div><a href="tel:+917001191931">7001191931</a></div>
-      </div>
     </div>
   </header>
 
-  <!-- HERO / HOME -->
+  <!-- HERO -->
   <section id="home" class="hero">
-    <div class="container">
-      <div class="card">
-        <h1>MiMoCare — দ্রুত, সঠিক এবং বিশ্বস্ত মোবাইল সার্ভিস</h1>
-        <p>স্বাগতম! আমরা IC-level সার্ভিস, মাইক্রোস্কোপ রিপেয়ার, এবং অরিজিনাল পার্টস দিয়ে থাকি। নিচের লিংকগুলোতে ক্লিক করলে প্রতিটি সেকশনে যাবে এবং সেখানে বিস্তারিত দেখা যাবে।</p>
-
-        <div style="margin-top:12px">
-          <a href="#services" class="navlink" style="display:inline-block;margin-right:8px;padding:8px 12px;border-radius:6px;border:1px solid #ddd;text-decoration:none;background:#fff">Our Services</a>
-          <a href="#contact" class="navlink" style="display:inline-block;padding:8px 12px;border-radius:6px;text-decoration:none;background:#111;color:#fff">Contact Now</a>
-        </div>
-      </div>
-
-      <aside class="card" id="contact-short">
-        <strong>যোগাযোগ</strong>
-        <div style="margin-top:8px"><a href="tel:+917001191931">7001191931</a></div>
-        <div class="muted" style="margin-top:8px">Ghutiary Sharif, Near Auto Stand</div>
-      </aside>
-    </div>
+    <h1>KGN Mimo Care — দ্রুত, সঠিক ও বিশ্বস্ত মোবাইল সার্ভিস</h1>
+    <p>২০ বছরের অভিজ্ঞতা, ২০ জন দক্ষ টেকনিশিয়ান এবং আধুনিক যন্ত্রপাতি দিয়ে আমরা চিপ-লেভেল সার্ভিস দিই — দ্রুত, সাশ্রয়ী ও বিশ্বাসযোগ্য।</p>
+    <a class="btn btn-primary" href="#services">আমাদের সার্ভিস</a>
+    <a class="btn btn-light" href="#booking">বুকিং করুন</a>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section class="section">
     <div class="card">
-      <h2>About MiMoCare</h2>
-      <p>MiMoCare ২০ বছরের অভিজ্ঞতায় গ্রাহকদের মোবাইল সার্ভিস দেয়। আমাদের টিম মাইক্রোস্কোপ সহ IC-লেভেল রিপেয়ার সক্ষম।</p>
-      <ul style="margin-top:10px;color:#444">
-        <li>অরিজিনাল পার্টস সরবরাহ</li>
-        <li>ফাস্ট টার্নঅ্যারাউন্ড ওয়ার্ক</li>
-        <li>ওয়ারেন্টি সহ সার্ভিস</li>
+      <h2>কেন KGN Mimo Care?</h2>
+      <ul style="margin-top:10px;line-height:1.7">
+        <li><strong>২০ বছরের অভিজ্ঞতা</strong> — গ্রাহকদের আস্থা অর্জন করেছি।</li>
+        <li><strong>২০ জন টেকনিশিয়ান</strong> — প্রশিক্ষিত ও পেশাদার টিম।</li>
+        <li><strong>চিপ-লেভেল (IC-Level) রিপেয়ার</strong> — আধুনিক যন্ত্রপাতি ব্যবহার।</li>
+        <li><strong>খুব কম রেটে কাজ</strong> — সাশ্রয়ী দামে উন্নত সার্ভিস।</li>
+        <li><strong>৯৯% সফলতা</strong> — প্রায় সব কাজ সমাধান হয়।</li>
+        <li><strong>রিটার্ন কাজ সমাধান</strong> — অন্য দোকান থেকে ফেরত আসা কাজও আমরা করি।</li>
+        <li><strong>দোকানদারদের জন্য বিশেষ ছাড়</strong> + হোলসেল ও রিটেল সুবিধা।</li>
       </ul>
     </div>
   </section>
@@ -133,25 +96,41 @@
   <!-- SERVICES -->
   <section id="services" class="section">
     <div class="card">
-      <h2>Services</h2>
-      <div class="services-grid">
-        <div class="service-item">
-          <strong>IC-level Repair</strong>
-          <p class="muted" style="margin-top:6px">মাইক্রোস্কোপ দিয়ে বেসিক ও সুরক্ষিত IC রিপেয়ার।</p>
-        </div>
-        <div class="service-item">
-          <strong>Screen Replacement</strong>
-          <p class="muted" style="margin-top:6px">অরিজিনাল/গুড কোয়ালিটি ডিসপ্লে।</p>
-        </div>
-        <div class="service-item">
-          <strong>Battery Replacement</strong>
-          <p class="muted" style="margin-top:6px">কেভি-টেস্টেড ব্যাটারি অপশন।</p>
-        </div>
-        <div class="service-item">
-          <strong>Water Damage Repair</strong>
-          <p class="muted" style="margin-top:6px">ক্লিন রিকভারি সার্ভিস।</p>
-        </div>
+      <h2>আমাদের সার্ভিসসমূহ</h2>
+      <div class="services-grid" style="margin-top:14px">
+        <div class="service-item"><strong>IC-Level Repair</strong><p class="muted">চিপ-লেভেল সার্ভিস, মাইক্রোস্কোপে।</p></div>
+        <div class="service-item"><strong>Screen Replacement</strong><p class="muted">খুব কম খরচে ডিসপ্লে বদল।</p></div>
+        <div class="service-item"><strong>Battery Replacement</strong><p class="muted">টেস্টেড ব্যাটারি।</p></div>
+        <div class="service-item"><strong>Water Damage Recovery</strong><p class="muted">ডেটা বাঁচানোর চেষ্টা সহ।</p></div>
+        <div class="service-item"><strong>iPhone Repair</strong><p class="muted">স্পেশালাইজড iPhone সার্ভিস।</p></div>
+        <div class="service-item"><strong>Software & Data</strong><p class="muted">সফটওয়্যার, ডেটা ব্যাকআপ/রিস্টোর।</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="section">
+    <div class="card">
+      <h2>বুকিং ও অফার</h2>
+      <ul style="margin-top:10px;line-height:1.7">
+        <li>অনলাইনে বুকিং করলে ফি — ₹৪৯ (পরের বিল থেকে বাদ যাবে)।</li>
+        <li>ওয়েবসাইট বুকিং এ *১০%–৫০% ডিসকাউন্ট*।</li>
+        <li>অগ্রিম বুকিং করলে দ্রুত সার্ভিস নিশ্চিত।</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DELIVERY -->
+  <section id="delivery" class="section">
+    <div class="card">
+      <h2>হোম ডেলিভারি</h2>
+      <p>কাস্টমার বা দোকানদার অনলাইনে ফরম পূরণ করে পণ্য অর্ডার করতে পারবেন।</p>
+      <ul style="margin-top:10px;line-height:1.7">
+        <li>অর্ডার কনফার্ম হলে হোম ডেলিভারি হবে।</li>
+        <li><strong>ক্যাশ অন ডেলিভারি নেই</strong> — আগে পেমেন্ট করতে হবে।</li>
+        <li>পেমেন্ট সফল হলে অর্ডার প্রক্রিয়াকরণ হবে।</li>
+        <li>গ্রাহক ঘরে বসেই পণ্য পাবেন।</li>
+      </ul>
     </div>
   </section>
 
@@ -159,64 +138,48 @@
   <section id="training" class="section">
     <div class="card">
       <h2>Training</h2>
-      <p>প্রোফেশনাল ট্রেনিং কোর্স—মোবাইল সার্ভিসিং ও মাইক্রোস্কোপ ব্যবহার। বিস্তারিত জানতে যোগাযোগ করুন।</p>
-    </div>
-  </section>
-
-  <!-- BOOKING -->
-  <section id="booking" class="section">
-    <div class="card">
-      <h2>Booking</h2>
-      <p>আপনি চাইলে পূর্বেই অ্যাপয়েন্টমেন্ট নিতে পারেন। ফোন করে দিন বা WhatsApp করে বুকিং নিশ্চিত করুন।</p>
+      <ul style="margin-top:10px;line-height:1.7">
+        <li><strong>Online Training</strong> — Zoom / Meet এর মাধ্যমে।</li>
+        <li><strong>Offline Training</strong> — আমাদের ল্যাবে হাতে-কলমে।</li>
+      </ul>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="card">
-      <h2>Contact</h2>
-      <p><strong>MiMoCare</strong></p>
-      <p>ঠিকানা: Ghutiary Sharif, Near Auto Stand, Jiban Tala</p>
-      <p>ফোন: <a href="tel:+917001191931">7001191931</a>, <a href="tel:+91915364541">915364541</a>, <a href="tel:+919832758151">9832758151</a></p>
-      <p style="margin-top:8px" class="muted">কাজের সময়: সকাল ৯টা - রাত ৯টা</p>
+      <h2>যোগাযোগ</h2>
+      <p><strong>শাখা ১:</strong> PNB ব্যাংকের পাশে, বিল্ডিং-এর ২য় তলা</p>
+      <p><strong>শাখা ২:</strong> নতুন রোড, অটো স্ট্যান্ডের পাশে</p>
+      <p style="margin-top:10px"><strong>ফোন:</strong> 
+        <a href="tel:+917001181931">7001181931</a>, 
+        <a href="tel:+919382758151">9382758151</a>, 
+        <a href="tel:+919153644541">9153644541</a>
+      </p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/917001181931" target="_blank">wa.me/917001181931</a></p>
+      <p><strong>সময়:</strong> প্রতিদিন সকাল ৯টা – রাত ৯টা</p>
     </div>
   </section>
 
-  <footer>
-    © MiMoCare — All rights reserved.
-  </footer>
+  <footer>© 2025 KGN Mimo Care — All Rights Reserved</footer>
 
 <script>
-  // Mobile menu toggle
-  const menuBtn = document.getElementById('menuBtn');
-  const nav = document.getElementById('mainNav');
-  menuBtn && menuBtn.addEventListener('click', ()=> nav.classList.toggle('open'));
-
-  // Highlight active nav link on scroll
-  const navLinks = document.querySelectorAll('.navlink');
-  const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href')));
+  const menuBtn=document.getElementById('menuBtn');
+  const nav=document.getElementById('mainNav');
+  menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+  const navLinks=document.querySelectorAll('.navlink');
+  const sections=[...navLinks].map(a=>document.querySelector(a.getAttribute('href')));
   function onScroll(){
-    const scrollPos = window.scrollY + 90; // offset for sticky header
-    for(let i=0;i<sections.length;i++){
-      const s = sections[i];
-      if(!s) continue;
-      if(scrollPos >= s.offsetTop && scrollPos < s.offsetTop + s.offsetHeight){
+    const scrollPos=window.scrollY+110;
+    sections.forEach((s,i)=>{
+      if(s && scrollPos>=s.offsetTop && scrollPos<s.offsetTop+s.offsetHeight){
         navLinks.forEach(x=>x.classList.remove('active'));
         navLinks[i].classList.add('active');
       }
-    }
-  }
-  window.addEventListener('scroll', onScroll);
-  // ensure correct active on load
-  onScroll();
-
-  // Close mobile nav on link click
-  navLinks.forEach(link=>{
-    link.addEventListener('click', ()=>{
-      nav.classList.remove('open');
     });
-  });
+  }
+  window.addEventListener('scroll',onScroll);
+  onScroll();
 </script>
-
 </body>
 </html>
